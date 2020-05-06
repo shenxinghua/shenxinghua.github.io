@@ -1,0 +1,27 @@
+main#main.main
+  div.main-inner
+    div#content-wrap.content-wrap
+      div#content.content(class=`${is_home() ? 'content-home' : ''}`)
+        block content
+
+      if (is_archive() && theme.post_list.paginate.archives) || is_category() || is_tag()
+        include ./_partials/widgets/paginator.pug
+
+      if page.comments
+        include ./_partials/widgets/comments.pug
+
+    if theme.sidebar.enable
+      div#sidebar-wrap.sidebar-wrap
+        aside#sidebar.sidebar
+          include ./_partials/sidebar/sidebar.pug
+
+    div.clearfix
+
+footer#footer.footer
+  div.footer-inner
+    include ./_partials/footer/footer.pug
+
+include ./_partials/widgets/loading-bar.pug
+
+if theme.back2top.enable
+  include ./_partials/widgets/back2top.pug
