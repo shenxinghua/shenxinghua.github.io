@@ -50,11 +50,6 @@
       if (hexo-config('header.bg_image.enable') && hexo-config('header.bg_image.url')) {
         background-image: url(hexo-config('header.bg_image.url_mb'));
       }
-      &-info {
-        &__title {
-          margin-bottom: 1rem;
-        }
-      }
     }
 
     &-nav {
@@ -105,11 +100,32 @@
 
   .content-wrap {
     width: 100%;
+    float: none;
+    margin-bottom: 20px;
   }
 
   if (hexo-config('sidebar.enable')) {
-    .sidebar-wrap {
-      display: none;
+    .sidebar-wrap{
+      width: 100%;
+      float: none;
+      .sidebar{
+        position: relative;
+        top: 0;
+        width: 100%;
+        background: none;
+        &-nav{
+          display: none;
+        }
+        &-toc{
+          display: none;
+        }
+        &-ov{
+          display: block;
+        }
+        &-reading{
+          display: none;
+        }
+      }
     }
   }
 
@@ -130,16 +146,7 @@
     }
 
     &-banner {
-      &-info {
-        &__title {
-          margin-bottom: 1rem;
-          font-size: 3rem;
-        }
-
-        &__subtitle {
-          font-size: .9rem;
-        }
-      }
+      background-position: 20% center;
     }
   }
 
@@ -191,19 +198,16 @@
     }
 
     &-banner {
-      &-info {
-        &__title {
-          margin-bottom: .5rem;
-          font-size: 2rem;
-        }
-
-        &__subtitle {
-          font-size: $font-size-base;
-        }
-      }
-
       &-arrow {
         bottom: .5rem;
+      }
+      &-info{
+        &__title{
+          font-size: 1.5rem;
+        }
+        &__subtitle{
+          font-size: 0.8rem;
+        }
       }
     }
   }

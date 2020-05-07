@@ -17,7 +17,7 @@ if footerCopyright || footerBeian
         span.footer__devider
       span!= footer.copyright.text || config.author
     if footerCopyright && footerBeian
-      span.footer__devider= '|'
+      br
     if footerBeian
       span!= footer.beian.icp
 

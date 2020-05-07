@@ -5,6 +5,7 @@ if (hexo-config('header.nav.height') && match('%', hexo-config('header.nav.heigh
 }
 
 .header {
+  margin-bottom: 20px;
   &-inner {
     width: 100%;
     font-size: $font-size-header;
@@ -209,7 +210,7 @@ if (hexo-config('header.nav.height') && match('%', hexo-config('header.nav.heigh
     height: 100%;
 
     if (hexo-config('header.bg_image.enable') && hexo-config('header.bg_image.url')) {
-      background: url(hexo-config('header.bg_image.url')) no-repeat center top / cover;
+      background: url(hexo-config('header.bg_image.url')) no-repeat center / cover;
     }
 
     if(hexo-config('header.bg_image.attachmentfixed')){
@@ -233,24 +234,26 @@ if (hexo-config('header.nav.height') && match('%', hexo-config('header.nav.heigh
     &-info {
       position: absolute;
       top: 50%;
-      left: 0;
-      padding: 0 .5rem;
-      width: 100%;
-      text-align: center;
+      right: 20px;
+      padding: 0;
+      text-align: right;
       transform: translateY(-50%);
+      line-height: 1;
+      text-shadow: 2px 2px 0 #666;
 
       &__title {
-        margin-bottom: 2rem;
-        font-size: 4rem;
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
         font-weight: $font-weight-bolder;
-        line-height: 1;
         color: $header-text-color;
+        font-style: italic;
       }
 
       &__subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: $font-weight-normal;
         color: $header-text-color;
+        font-style: italic;
       }
     }
 

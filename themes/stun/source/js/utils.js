@@ -601,15 +601,5 @@ Stun.utils = Stun.$u = {
       imgDefereds.push(dfd);
     });
     $.when.apply(null, imgDefereds).then(callback);
-  },
-
-  scrollToMain: function (){
-    if(/^\/page\/\d+\/$/.test(location.pathname)){
-      $('body')
-        .velocity('stop')
-        .velocity('scroll', { offset: window.innerHeight }, function(){
-          $('.header-nav').addClass('slider--down').removeClass('slider--up')
-        });
-    }
   }
 };

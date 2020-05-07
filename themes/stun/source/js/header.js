@@ -207,7 +207,4 @@ $(document).ready(function () {
   // Initializaiton
   Stun.utils.pjaxReloadHeader();
   Stun.utils.pjaxReloadScrollIcon();
-
-  // page scroll to second screen if pathname is /page/:num/
-  Stun.utils.scrollToMain();
 });
